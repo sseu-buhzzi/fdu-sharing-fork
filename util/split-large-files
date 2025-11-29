@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# find large files in public/resources and split them into smaller parts
+
+find public/resources -type f -size +25M | while read -r file; do
+  echo "Splitting $file ..."
+  split -a 4 -b 25M -d --verbose "$file" "${file}."
+  rm "$file"
+done

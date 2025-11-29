@@ -6,6 +6,7 @@ interface FileDownloadProps {
   size?: string
   date?: string
   type?: 'pdf' | 'doc' | 'zip' | 'other'
+  numberSplitted?: number
 }
 
 const typeIcons: Record<string, string> = {
@@ -22,15 +23,14 @@ const typeColors: Record<string, string> = {
   other: '#95a5a6',
 }
 
-export function FileDownload({ 
-  name, 
-  path, 
-  size, 
-  date,
-  type = 'pdf' 
-}: FileDownloadProps) {
-  const icon = typeIcons[type] || typeIcons.other
-  const color = typeColors[type] || typeColors.other
+function singleFileDownload(
+  name: string,
+  path: string,
+  icon: string,
+  color: string,
+  size?: string | undefined,
+  date?: string,
+) {
 
   return (
     <a
@@ -72,6 +72,37 @@ export function FileDownload({
         ⬇️
       </span>
     </a>
+  )
+}
+
+export function FileDownload({ 
+  name, 
+  path, 
+  size, 
+  date,
+  type = 'pdf',
+  numberSplitted = null,
+}: FileDownloadProps) {
+  const icon = typeIcons[type] || typeIcons.other
+  const color = typeColors[type] || typeColors.other
+  if (numberSplitted === null) {
+    return singleFileDownload(name, path, icon, color, size, date)
+  }
+  return (
+    <div
+      style={{
+        marginBottom: '8px',
+        padding: '8px 8px 0 8px',
+        borderRadius: '8px',
+        border: '1px solid #e1e5e9',
+      }}
+    >
+      {Array.from({ length: numberSplitted }, (_, i) => {
+        const partName = `${name} (Part ${i + 1})`
+        const partPath = `${path}.${i.toString().padStart(4, '0')}`
+        return singleFileDownload(partName, partPath, icon, color, size, date)
+      })}
+    </div>
   )
 }
 
