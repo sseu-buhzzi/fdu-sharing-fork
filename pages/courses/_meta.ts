@@ -23,4 +23,5 @@ export default {
   'tengfeixiandao': '🚀 腾飞先导课',
   'jindaishi': '📜 近代史纲要',
   'xigai': '📕 习概',
+  'rengongzhinengjichu': '⚙️ 人工智能基础' 	
 }
