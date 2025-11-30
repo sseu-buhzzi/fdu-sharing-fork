@@ -24,4 +24,5 @@ export default {
   'jindaishi': '📜 近代史纲要',
   'xigai': '📕 习概',
   'makesi': '📗 马克思主义基本原理',
+  'rengongzhinengjichu': '⚙️ 人工智能基础' 
 }
