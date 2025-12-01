@@ -4,7 +4,7 @@ import { DocsThemeConfig } from 'nextra-theme-docs'
 const config: DocsThemeConfig = {
   logo: (
     <span style={{ fontWeight: 700, fontSize: '1.2rem' }}>
-      📚 FDU CS 资料共享
+      📚 FDU Sharing
     </span>
   ),
   search: {

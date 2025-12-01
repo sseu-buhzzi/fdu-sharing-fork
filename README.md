@@ -1,5 +1,13 @@
 Written by [victkk](https://github.com/victkk).
 
+# 📚 FDU CS 资料共享
+
+> 复旦大学计算机学院考试资料分享网站
+
+🌐 **网站地址：[https://fdu-sharing.vercel.app/](https://fdu-sharing.vercel.app/)**
+
+---
+
 ## 前言
 我还记得第一次接触到考试资料这个概念，甚至意识到知识是可以被标价买卖的，是在高三毕业那个暑假，为了准备腾飞书院的先导课考试。
 
@@ -20,7 +28,7 @@ Written by [victkk](https://github.com/victkk).
 3. 在对应课程的 `.mdx` 文件中添加下载链接
 4. 提交 **Pull Request**
 
-详细步骤请查看 [使用与贡献指南](/guide)
+详细步骤请查看 [使用与贡献指南](/pages/guide.mdx)
 
 ## 免责声明
 
@@ -28,3 +36,4 @@ Written by [victkk](https://github.com/victkk).
 - 资料版权归原作者所有
 - 如有原作者/整理者希望维护自己的合法权利，请联系我们删除
 - 请勿将资料用于商业用途
+
