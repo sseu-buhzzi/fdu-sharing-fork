@@ -9,4 +9,5 @@ export default withNextra({
   images: {
     unoptimized: true,
   },
+  output: 'export',
 })
