@@ -28,7 +28,7 @@ export function Comments() {
     <div style={{ marginTop: '3rem' }}>
       <h2 style={{ marginBottom: '1rem' }}>💬 评论区</h2>
       <Giscus
-        host="http://giscus-proxy.buhzzi.com:3080"
+        host="https://giscus-proxy.buhzzi.com:3080"
         repo="victkk/FDU-Sharing"
         repoId="R_kgDOQfXLpA"
         category="General"
